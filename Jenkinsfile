@@ -7,12 +7,11 @@ pipeline {
 
     stages {
         stage('Checkout') {
-            steps {
-                git branch: 'main',
-                    url: 'https://github.com/calWgpr/GenlogProject2.git'
-            }
+           steps {
+            git branch: 'main', url: 'https://github.com/your-user/your-repo.git'
+           }
         }
-
+        
         stage('Build') {
             steps {
                 sh 'mvn clean package'
